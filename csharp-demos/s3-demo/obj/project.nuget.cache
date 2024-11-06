@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MRIhyb6wqSM=",
+  "success": true,
+  "projectFilePath": "D:\\git\\aws-dev-siemens\\csharp-demos\\s3-demo\\s3-demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mahendra\\.nuget\\packages\\awssdk.core\\3.7.0.1\\awssdk.core.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\Mahendra\\.nuget\\packages\\awssdk.s3\\3.7.0.1\\awssdk.s3.3.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
