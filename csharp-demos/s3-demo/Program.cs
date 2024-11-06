@@ -10,7 +10,11 @@ namespace S3Demo
         static async Task Main(string[] args)
         {
             var s3Client = new AmazonS3Client(Amazon.RegionEndpoint.USEast1);
-
+            // Explicitely assigned credentials from code
+            // BEST PRACTICE : NOT RECOMMENDED
+            // var awsAccessKeyId = "your-access-key-id";
+            // var awsSecretAccessKey = "your-secret-access-key";
+            // var s3Client = new AmazonS3Client(awsAccessKeyId, awsSecretAccessKey, Amazon.RegionEndpoint.USEast1);
             try
             {
                 var response = await s3Client.ListBucketsAsync();
@@ -19,6 +23,31 @@ namespace S3Demo
                 {
                     Console.WriteLine(bucket.BucketName);
                 }
+                Console.WriteLine("Enter the name of the bucket to create:");
+                var bucketName = Console.ReadLine();
+
+                var putBucketRequest = new PutBucketRequest
+                {
+                    BucketName = bucketName,
+                    UseClientRegion = true
+                };
+
+                var putBucketResponse = await s3Client.PutBucketAsync(putBucketRequest);
+                Console.WriteLine("Bucket created successfully.");
+
+                Console.WriteLine("Enter the file path to upload:");
+                var filePath = Console.ReadLine();
+                var fileName = System.IO.Path.GetFileName(filePath);
+
+                var putObjectRequest = new PutObjectRequest
+                {
+                    BucketName = bucketName,
+                    Key = fileName,
+                    FilePath = filePath
+                };
+
+                var putObjectResponse = await s3Client.PutObjectAsync(putObjectRequest);
+                Console.WriteLine("File uploaded successfully.");
             }
             catch (AmazonS3Exception e)
             {
