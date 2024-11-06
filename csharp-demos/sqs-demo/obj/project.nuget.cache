@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nJF3v2SWm0k=",
+  "success": true,
+  "projectFilePath": "D:\\git\\aws-dev-siemens\\csharp-demos\\sqs-demo\\sqs-demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mahendra\\.nuget\\packages\\awssdk.core\\3.7.0.1\\awssdk.core.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\Mahendra\\.nuget\\packages\\awssdk.sqs\\3.7.0.1\\awssdk.sqs.3.7.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
