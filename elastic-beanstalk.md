@@ -65,7 +65,7 @@ You must have created TWO roles. Refer to [this](./iam-role-for-beanstalk.md) do
     ```ini
     RootVolumeType=gp3
     BlockDeviceMapping=gp3
-    Disable IMDSv1=trueF
+    Disable IMDSv1=true
     ```
     Click `Next` (Skip this step)
 
