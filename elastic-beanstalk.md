@@ -49,7 +49,7 @@ You must have created TWO roles. Refer to [this](./iam-role-for-beanstalk.md) do
 
 1.  in Third stage:
 
-    ```init
+    ```ini
     [VPC]
     VPC=Choose any existing VPC
 
